@@ -40,7 +40,27 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+			<exclusion>
+				<groupId>net.minidev</groupId>
+				<artifactId>json-smart</artifactId>
+			</exclusion>
+			</exclusions>
 		</dependency>
+
+		<!-- 手动添加修复后的 json-smart 版本 -->
+		<dependency>
+			<groupId>net.minidev</groupId>
+			<artifactId>json-smart</artifactId>
+			<version>2.5.2</version> <!-- 使用无漏洞版本 -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
